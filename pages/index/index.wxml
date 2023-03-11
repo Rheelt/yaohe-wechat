@@ -1,2 +1,7 @@
 <!--index.wxml-->
+<block wx:for="{{resultJson}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="id">
+<view>{{iindex}}</view>
+<view>{{iitem.title}},{{iitem.content}}</view>
+</block>
+
 <button type="default" plain="true" bindtap="getEventContents" bin>按钮</button>
