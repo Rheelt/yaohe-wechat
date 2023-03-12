@@ -6,6 +6,8 @@ const app = getApp()
 
 Page({
   data : {
+    status: null,
+    msg: null,
     isGetResult : false,
     resultJson : null
   },
@@ -18,7 +20,12 @@ Page({
         console.log(res);
         that.setData({
           isGetResult: true,
-          resultJson: res.data
+          status: res.data.status,
+          msg: res.data.msg,
+          resultJson: res.data.data
+        });
+        wx.showToast({
+          title: res.data.msg+ "(" + res.data.status + ")"
         });
       }
     })
