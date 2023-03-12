@@ -6,10 +6,10 @@ const app = getApp()
 
 Page({
   data : {
-    status: null,
-    msg: null,
+    status: 0,
+    msg: "",
     isGetResult : false,
-    resultJson : null
+    resultJson : []
   },
   getEventContents: function (e) {
     let that = this;
